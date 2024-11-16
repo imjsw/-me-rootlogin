@@ -2,7 +2,7 @@
 
 # 设置 ROOT 密码
 echo "设置你的ROOT密码"
-echo -e "your_new_password\rooT123@ | sudo passwd root
+echo -e "your_new_password\nyour_new_password" | sudo passwd root
 
 # 启用 root 登录和密码认证
 sudo sed -i 's/^\s*#\?\s*PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config
@@ -16,5 +16,3 @@ sudo systemctl restart sshd
 
 # 完成提示
 echo -e "ROOT登录设置完毕"
-
-
